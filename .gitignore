@@ -1,0 +1,10 @@
+*
+
+!/lib
+!/lib/*
+!.clang-format
+!.gitignore
+!CMakeLists.txt
+!main.c
+!package.sh
+!readme.md
