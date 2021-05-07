@@ -10,5 +10,5 @@ fi
 if [ "$1" == "l" ]
 then
     echo "= LEAKS ="
-    leaks --atExit -- ./$APPNAME
+    leaks --atExit -- ./cmake-build-debug/$APPNAME
 fi
