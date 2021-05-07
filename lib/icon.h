@@ -24,7 +24,7 @@ icon_create()
 		return NULL;
 	}
 	Uint8 *d = (Uint8 *)calloc(ICON_SIZE, sizeof(Uint8));
-	if(i == NULL) {
+	if(d == NULL) {
 		free(i);
 		error("Allocating", "icon data");
 		return NULL;

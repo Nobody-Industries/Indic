@@ -2,6 +2,7 @@
 #include "fonts.h"
 #include "color.h"
 #include "collisions.h"
+#include "error.h"
 #include <string.h>
 #include <SDL.h>
 
@@ -36,10 +37,13 @@ button_create(
 	color bgColor)
 {
 	button *b = (button *)calloc(1, sizeof(button));
-	if(b == NULL)
+	if(b == NULL) {
+		error("Allocating", "button");
 		return NULL;
+	}
 	b->text = (char *)calloc(strlen(text), sizeof(char));
 	if(b->text == NULL) {
+		error("Allocating", "button text");
 		free(b);
 		return NULL;
 	}
